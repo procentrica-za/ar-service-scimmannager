@@ -44,7 +44,7 @@ func (s *Server) verifycredentials() http.HandlerFunc {
 		}
 
 		http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
-		// TODO: Set InsecureSkipVerify as config in environment.env
+		// TODO: Set InsecureSkipVerify as config in environment.env.
 		client := &http.Client{}
 		data := url.Values{}
 		data.Set("grant_type", "password")
